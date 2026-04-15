@@ -1,0 +1,81 @@
+package day1;
+
+import java.time.Duration;
+import java.util.UUID;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+
+public class SignUpTest {
+	
+	//With page factory
+	
+	WebDriver driver;
+	
+	// Generate a unique email
+    private String generateUniqueEmail() {
+        String uniqueID = UUID.randomUUID().toString().substring(0, 8); // Short unique ID
+        return "testuser_" + uniqueID + "@gmail.com";
+    }
+	
+	// setup
+	@BeforeClass
+	void setup() {
+		driver=new ChromeDriver();
+		driver.get("https://www.app.aisensy.com/signup");
+		//driver.get("https://staging.dj8sl4xl9bxki.amplifyapp.com/signup");
+		
+		driver.manage().window().maximize();
+	}
+	
+	//test method
+	
+	@Test
+	void SignUp() throws InterruptedException {
+		
+		// Generate a unique email
+        String uniqueEmail = generateUniqueEmail();
+
+		//creating the object for login class
+		SignUp sp=new SignUp(driver);
+		
+		sp.setFullName("vikash");
+		sp.setEmail(uniqueEmail);
+		sp.setContact("8279396355");
+		sp.setPass("12345@A12");
+		sp.setConfPass("12345@A12");
+		//Thread.sleep(2000);
+		sp.clickFreeTrail();
+		
+		//after otp
+		
+// 		Wait for the company name field after OTP
+		
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(60));
+		wait.until(ExpectedConditions.visibilityOf(sp.txt_companyName));
+		
+		
+		sp.setCompanyName("Aisensy");
+		sp.setcompanyDesc("descfjygukh");
+		
+		//static dropdown
+		
+		//sp.selectCountry("India");
+		
+		
+		sp.selectState("Bihar");
+		sp.selectSize("1 - 10 Employees");
+		sp.selectIndustries("IT Services");
+		
+		sp.clickSubmit();  
+		
+
+		
+	}
+	
+
+}

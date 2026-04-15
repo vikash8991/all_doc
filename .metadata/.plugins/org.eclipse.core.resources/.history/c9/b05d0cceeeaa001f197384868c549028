@@ -1,0 +1,126 @@
+package day1;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class ContactPage {
+	
+	WebDriver driver;
+	//explecit wait, wait till 60sec if element is not visible
+	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(60));
+	//constructor
+		
+	public ContactPage(WebDriver driver) {
+		this.driver=driver;
+		PageFactory.initElements(driver, this);
+	}
+	
+	
+	@FindBy(css = "[id=\"contacts\"]")
+	private WebElement btn_contact;
+	
+//	@FindBy(xpath = "//*[@id='contacts']")
+//	WebElement btn_contact;
+	
+	//search filter
+	
+	@FindBy(css = "[placeholder=\"Search name or mobile number\"]")
+	private WebElement txt_searchbox;	
+	
+	//ad contact
+	
+	@FindBy(xpath = "//*[@id=\"route-container\"]/div/div[3]/div/div/div[2]/div[1]/button/span[1]")
+	private WebElement btn_addContact;
+	
+	
+	@FindBy(css = "[placeholder=\"User Name\"]")
+	private WebElement txt_userName;
+	
+	
+	@FindBy(css = "[placeholder=\"WhatsApp Number\"]")
+	private WebElement txt_whatsappNumber;
+	
+	
+
+	@FindBy(xpath = "/html/body/div[13]/div[3]/div/div[3]/button")
+	private WebElement btn_Add_Contact;
+	
+
+	public void clickOnContact() {
+	    btn_contact.click();
+	}
+	
+	public void clickOnSearchbox() {
+		txt_searchbox.click();
+	}
+	
+	
+	public void clickOnAddContact() {
+		btn_addContact.click();
+	}
+	
+	public void setUserName(String name) {
+		txt_userName.click();
+		txt_userName.sendKeys(name);
+	}
+	
+	
+	public void setWhatsappNumber(String name) {
+		txt_whatsappNumber.click();
+		txt_whatsappNumber.sendKeys(name);
+	}
+	
+	//btn_Add_Contact
+	
+	public void clickOnAddContactBtn() {
+//		btn_Add_Contact.click();
+		
+//		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+//		WebElement addContactBtn = wait.until(ExpectedConditions.elementToBeClickable(btn_Add_Contact));
+//		addContactBtn.click();
+		
+//		JavascriptExecutor js = (JavascriptExecutor) driver;
+//		js.executeScript("arguments[0].scrollIntoView(true);", btn_Add_Contact);
+//		btn_Add_Contact.submit();
+		
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		WebElement addContactBtn = wait.until(ExpectedConditions.elementToBeClickable(btn_Add_Contact));
+		Actions actions = new Actions(driver);
+		actions.moveToElement(btn_Add_Contact).click().perform();
+	}
+	
+//	public void clickOnAddContactBtn() {
+//	    try {
+//	        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+//	        WebElement btn_Add_Contact = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/div[15]/div[3]/div/div[3]/button/span[2]")));
+//
+//	        // Scroll and click
+//	        JavascriptExecutor js = (JavascriptExecutor) driver;
+//	        js.executeScript("arguments[0].scrollIntoView(true);", btn_Add_Contact);
+//	        
+//	        // Log element state
+//	        System.out.println("Displayed: " + btn_Add_Contact.isDisplayed());
+//	        System.out.println("Enabled: " + btn_Add_Contact.isEnabled());
+//	        
+//	        // Perform click
+//	        btn_Add_Contact.click();
+//	        System.out.println("Button clicked successfully.");
+//
+//	    } catch (Exception e) {
+//	        System.err.println("Error clicking Add Contact button: " + e.getMessage());
+//	    }
+//	}
+
+	
+	
+
+}

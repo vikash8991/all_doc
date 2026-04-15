@@ -1,0 +1,119 @@
+2024-11-23 15:14:20 [main] INFO  aiSensyTest.LoginPageTest - **** Starting Login test ****
+2024-11-23 15:14:21 [main] INFO  aiSensyTest.LoginPageTest - **** clicked on Login btn ****
+2024-11-23 15:17:22 [main] INFO  aiSensyTest.LoginPageTest - **** Starting Login test ****
+2024-11-23 15:17:22 [main] INFO  aiSensyTest.LoginPageTest - **** clicked on Login btn ****
+2024-11-23 15:48:15 [main] INFO  aiSensyTest.LoginPageTest - **** Starting Login test ****
+2024-11-23 15:48:15 [main] INFO  aiSensyTest.LoginPageTest - **** clicked on Login btn ****
+2024-11-23 15:48:41 [main] INFO  aiSensyTest.LoginPageTest - **** Starting Login test ****
+2024-11-23 15:48:42 [main] INFO  aiSensyTest.LoginPageTest - **** clicked on Login btn ****
+2024-11-23 15:50:39 [main] INFO  aiSensyTest.LoginPageTest - **** Starting Login test ****
+2024-11-23 15:50:40 [main] INFO  aiSensyTest.LoginPageTest - **** clicked on Login btn ****
+2024-11-23 15:56:57 [main] INFO  aiSensyTest.LoginPageTest - **** Starting Login test ****
+2024-11-23 15:56:58 [main] INFO  aiSensyTest.LoginPageTest - **** clicked on Login btn ****
+2024-11-23 16:00:23 [main] INFO  aiSensyTest.LoginPageTest - **** Starting Login test ****
+2024-11-23 16:00:23 [main] INFO  aiSensyTest.LoginPageTest - **** clicked on Login btn ****
+2024-11-23 16:00:37 [main] INFO  aiSensyTest.LoginPageTest - **** Starting Login test ****
+2024-11-23 16:00:38 [main] INFO  aiSensyTest.LoginPageTest - **** clicked on Login btn ****
+2024-11-23 16:00:49 [main] INFO  aiSensyTest.LoginPageTest - **** Starting Login test ****
+2024-11-23 16:00:49 [main] INFO  aiSensyTest.LoginPageTest - **** clicked on Login btn ****
+2024-11-23 16:02:58 [TestNG-tests-3] INFO  aiSensyTest.LoginPageTest - **** Starting Login test ****
+2024-11-23 16:02:59 [TestNG-tests-3] INFO  aiSensyTest.LoginPageTest - **** clicked on Login btn ****
+2024-11-23 16:03:01 [TestNG-tests-2] INFO  aiSensyTest.LoginPageTest - **** Starting Login test ****
+2024-11-23 16:03:02 [TestNG-tests-2] INFO  aiSensyTest.LoginPageTest - **** clicked on Login btn ****
+2024-11-23 16:03:06 [TestNG-tests-1] INFO  aiSensyTest.LoginPageTest - **** Starting Login test ****
+2024-11-23 16:03:08 [TestNG-tests-1] INFO  aiSensyTest.LoginPageTest - **** clicked on Login btn ****
+2024-11-23 18:43:32 [main] INFO  aiSensyTest.LoginPageTest - **** Starting Login test ****
+2024-11-23 18:43:32 [main] INFO  aiSensyTest.LoginPageTest - **** clicked on Login btn ****
+2024-11-29 22:44:17 [main] INFO  aiSensyTest.LoginPageTest - **** Starting Login test ****
+2024-11-29 22:44:17 [main] INFO  aiSensyTest.LoginPageTest - **** clicked on Login btn ****
+2024-11-29 22:44:30 [main] INFO  aiSensyTest.LoginPageTest - **** Finished Login of Aisensy ****
+2024-11-29 22:50:37 [main] INFO  aiSensyTest.LoginPageTest - **** Starting Login test ****
+2024-11-29 22:50:37 [main] INFO  aiSensyTest.LoginPageTest - **** clicked on Login btn ****
+2024-11-29 22:50:45 [main] INFO  aiSensyTest.LoginPageTest - **** Finished Login of Aisensy ****
+2024-11-29 22:51:15 [main] INFO  aiSensyTest.LoginPageTest - **** Starting Login test ****
+2024-11-29 22:51:16 [main] INFO  aiSensyTest.LoginPageTest - **** clicked on Login btn ****
+2024-11-29 22:51:19 [main] INFO  aiSensyTest.LoginPageTest - **** Finished Login of Aisensy ****
+2024-11-29 22:52:32 [main] INFO  aiSensyTest.LoginPageTest - **** Starting Login test ****
+2024-11-29 22:52:33 [main] INFO  aiSensyTest.LoginPageTest - **** clicked on Login btn ****
+2024-11-29 22:52:35 [main] INFO  aiSensyTest.LoginPageTest - **** Finished Login of Aisensy ****
+2024-11-29 22:54:48 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\Vikas\Documents\workspace-spring-tool-suite-4-4.26.0.RELEASE\HybridAut\master.xml
+
+2024-11-29 22:54:56 [main] INFO  aiSensyTest.LoginPageTest - **** Starting Login test ****
+2024-11-29 22:54:56 [main] INFO  aiSensyTest.LoginPageTest - **** clicked on Login btn ****
+2024-11-29 22:54:59 [main] INFO  aiSensyTest.LoginPageTest - **** Finished Login of Aisensy ****
+2024-11-29 22:57:06 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\Vikas\Documents\workspace-spring-tool-suite-4-4.26.0.RELEASE\HybridAut\master.xml
+
+2024-11-29 22:57:14 [main] INFO  aiSensyTest.LoginPageTest - **** Starting Login test ****
+2024-11-29 22:57:15 [main] INFO  aiSensyTest.LoginPageTest - **** clicked on Login btn ****
+2024-11-29 22:57:23 [main] INFO  aiSensyTest.LoginPageTest - **** Finished Login of Aisensy ****
+2024-12-01 20:43:47 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\Vikas\Documents\workspace-spring-tool-suite-4-4.26.0.RELEASE\HybridAut\master.xml
+
+2024-12-01 20:43:54 [main] INFO  aiSensyTest.LoginPageTest - **** Starting Login test ****
+2024-12-01 20:43:54 [main] INFO  aiSensyTest.LoginPageTest - **** clicked on Login btn ****
+2024-12-01 20:43:56 [main] INFO  aiSensyTest.LoginPageTest - **** Finished Login of Aisensy ****
+2024-12-01 22:42:52 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\Vikas\Documents\workspace-spring-tool-suite-4-4.26.0.RELEASE\HybridAut\master.xml
+
+2024-12-01 22:43:01 [main] INFO  aiSensyTest.LoginPageTest - **** Starting Login test ****
+2024-12-01 22:43:01 [main] INFO  aiSensyTest.LoginPageTest - **** clicked on Login btn ****
+2024-12-01 22:43:03 [main] INFO  aiSensyTest.LoginPageTest - **** Finished Login of Aisensy ****
+2024-12-01 22:56:40 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\Vikas\Documents\workspace-spring-tool-suite-4-4.26.0.RELEASE\HybridAut\master.xml
+
+2024-12-01 22:56:47 [main] INFO  aiSensyTest.LoginPageTest - **** Starting Login test ****
+2024-12-01 22:56:47 [main] INFO  aiSensyTest.LoginPageTest - **** clicked on Login btn ****
+2024-12-01 22:56:49 [main] INFO  aiSensyTest.LoginPageTest - **** Finished Login of Aisensy ****
+2024-12-01 22:58:08 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\Vikas\Documents\workspace-spring-tool-suite-4-4.26.0.RELEASE\HybridAut\master.xml
+
+2024-12-01 22:58:14 [main] INFO  aiSensyTest.LoginPageTest - **** Starting Login test ****
+2024-12-01 22:59:32 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\Vikas\Documents\workspace-spring-tool-suite-4-4.26.0.RELEASE\HybridAut\master.xml
+
+2024-12-01 22:59:41 [main] INFO  aiSensyTest.LoginPageTest - **** Starting Login test ****
+2024-12-01 22:59:42 [main] INFO  aiSensyTest.LoginPageTest - **** clicked on Login btn ****
+2024-12-01 22:59:43 [main] INFO  aiSensyTest.LoginPageTest - **** Finished Login of Aisensy ****
+2024-12-01 23:00:15 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\Vikas\Documents\workspace-spring-tool-suite-4-4.26.0.RELEASE\HybridAut\master.xml
+
+2024-12-01 23:00:22 [main] INFO  aiSensyTest.LoginPageTest - **** Starting Login test ****
+2024-12-01 23:00:22 [main] INFO  aiSensyTest.LoginPageTest - **** clicked on Login btn ****
+2024-12-01 23:11:23 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\Vikas\Documents\workspace-spring-tool-suite-4-4.26.0.RELEASE\HybridAut\master.xml
+
+2024-12-01 23:11:30 [main] INFO  aiSensyTest.LoginPageTest - **** Starting Login test ****
+2024-12-01 23:11:30 [main] INFO  aiSensyTest.LoginPageTest - **** clicked on Login btn ****
+2024-12-01 23:11:33 [main] INFO  aiSensyTest.LoginPageTest - **** Finished Login of Aisensy ****
+2024-12-01 23:16:55 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\Vikas\Documents\workspace-spring-tool-suite-4-4.26.0.RELEASE\HybridAut\master.xml
+
+2024-12-01 23:17:02 [main] INFO  aiSensyTest.LoginPageTest - **** Starting Login test ****
+2024-12-01 23:17:02 [main] INFO  aiSensyTest.LoginPageTest - **** clicked on Login btn ****
+2024-12-01 23:17:04 [main] INFO  aiSensyTest.LoginPageTest - **** Finished Login of Aisensy ****
+2024-12-01 23:22:48 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\Vikas\Documents\workspace-spring-tool-suite-4-4.26.0.RELEASE\HybridAut\master.xml
+
+2024-12-01 23:22:55 [main] INFO  aiSensyTest.LoginPageTest - **** Starting Login test ****
+2024-12-01 23:22:55 [main] INFO  aiSensyTest.LoginPageTest - **** clicked on Login btn ****
+2024-12-01 23:22:58 [main] INFO  aiSensyTest.LoginPageTest - **** Finished Login of Aisensy ****
+2024-12-01 23:25:17 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\Vikas\Documents\workspace-spring-tool-suite-4-4.26.0.RELEASE\HybridAut\master.xml
+
+2024-12-01 23:25:24 [main] INFO  aiSensyTest.LoginPageTest - **** Starting Login test ****
+2024-12-01 23:25:24 [main] INFO  aiSensyTest.LoginPageTest - **** clicked on Login btn ****
+2024-12-01 23:25:30 [main] INFO  aiSensyTest.LoginPageTest - **** Finished Login of Aisensy ****
+2024-12-02 16:21:02 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\Vikas\Documents\workspace-spring-tool-suite-4-4.26.0.RELEASE\HybridAut\crossbrowsertesting.xml
+
+2024-12-02 16:21:11 [main] INFO  aiSensyTest.LoginPageTest - **** Starting Login test ****
+2024-12-02 16:21:12 [main] INFO  aiSensyTest.LoginPageTest - **** clicked on Login btn ****
+2024-12-02 16:21:20 [main] INFO  aiSensyTest.LoginPageTest - **** Finished Login of Aisensy ****
+2024-12-02 16:21:31 [main] INFO  aiSensyTest.LoginPageTest - **** Starting Login test ****
+2024-12-02 16:21:31 [main] INFO  aiSensyTest.LoginPageTest - **** clicked on Login btn ****
+2024-12-02 16:21:34 [main] INFO  aiSensyTest.LoginPageTest - **** Finished Login of Aisensy ****
+2024-12-02 16:22:16 [main] INFO  aiSensyTest.LoginPageTest - **** Starting Login test ****
+2024-12-02 16:22:17 [main] INFO  aiSensyTest.LoginPageTest - **** clicked on Login btn ****
+2024-12-02 16:22:20 [main] INFO  aiSensyTest.LoginPageTest - **** Finished Login of Aisensy ****

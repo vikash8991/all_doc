@@ -1,0 +1,85 @@
+package day1;
+
+import java.time.Duration;
+import java.util.UUID;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+
+public class QrCampaignTest {
+	
+
+	WebDriver driver;
+   // WebDriverWait wait;
+    
+	
+	private String generateUniqueCampaignName() {
+	    String uniqueID = UUID.randomUUID().toString().substring(0, 6); // Short unique ID
+	    return "Campaign" + "_" + uniqueID;
+	}
+	
+	// setup
+	@BeforeClass
+	void setup() {
+		driver=new ChromeDriver();
+		driver.get("https://www.app.aisensy.com/login");
+		driver.manage().window().maximize();
+		
+	}
+	
+	//test method
+	
+	@Test(priority = 1)
+	void login() {
+		//creating the object for login class
+		LoginPage2 lp=new LoginPage2(driver);
+		
+		lp.setUsername("vikash.kumar");  // Enter Actual username
+		lp.setPassword("vikash.kumar1");  // Enter Actual password
+		lp.clickLogin();
+		
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		wait.until(ExpectedConditions.urlToBe("https://www.app.aisensy.com/projects/64e60ac3b582c60e76a1ad78/dashboard"));
+
+		Assert.assertEquals(driver.getCurrentUrl(), "https://www.app.aisensy.com/projects/64e60ac3b582c60e76a1ad78/dashboard", "Not redirected to the expected dashboard.");
+	}
+	
+	
+	
+	@Test(priority = 2)
+	void campCreation() throws InterruptedException {
+		QrCampaign QrCampObj=new QrCampaign(driver);
+		
+		String uniqueCampaign=generateUniqueCampaignName();
+		
+		//System.out.println("Clicking on Campaign button...");
+		Thread.sleep(2000);
+		QrCampObj.clickCampaign();
+		
+		
+		//System.out.println("Clicking on Launch Campaign button...");
+		Thread.sleep(2000);
+		QrCampObj.launchButton();
+		
+		
+		
+		
+		//System.out.println("Clicking on Api Campaign button...");
+		Thread.sleep(2000);
+		QrCampObj.clickOnQrCampaign();
+		
+		//user is able to move forward without entering the campaign name
+		QrCampObj.setQrCampaignName(uniqueCampaign);
+		
+		QrCampObj.setCoustemMessage();
+		
+		QrCampObj.clickOnSetLive();
+	}
+		
+
+}

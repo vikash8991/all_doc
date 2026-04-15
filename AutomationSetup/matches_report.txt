@@ -1,0 +1,9 @@
+
+===== UNIQUE MATCHES =====
+✅ Found: function setCrossDomainCookie(i,e,a){var t="";if(a){var o=new Date;o.setTime(o.getTime()+24*a*60*60*1e3),t="; expires="+o.toUTCString()}var n="object"==typeof e?JSON.stringify(e):e;document.cookie=i+"="+(n||"")+t+"; domain=.aisensy.com; path=/"}function updateClickCount(i,e){fetch("https://backend.aisensy.com/client/t1/affiliates/track-click-count",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({link:window.location.href,affiliateId:i,isUnique:e})}).catch((i=>{console.error("Error in updating click count: ",i)}))}function checkCookie(i){var e=document.cookie.match(new RegExp("(^| )"+i+"=([^;]+)"));return e?(updateClickCount(affiliateId,!1),e[2]):null}var urlParams=new URLSearchParams(window.location.search),affiliateId=urlParams.get("res");if(affiliateId&&!checkCookie("aisensy_affiliate_id")){var affiliateObj={affiliateId:affiliateId,link:window.location.href,timestamp:(new Date).getTime()};setCrossDomainCookie("aisensy_affiliate_id",affiliateObj,30),updateClickCount(affiliateId,!0)}
+📍 XPath: /html/body/script[3]
+✅ Found: (function(a,b){a=document.createElement("script");a.type="text/javascript";a.async=!0;a.src="https://cdn-in.pagesense.io/js/aisensy/23640c72623a4639b23b58efd93a4209.js";b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b)})(window,"script");
+📍 XPath: /html/body/script[8]
+✅ Found: (function(a,b){a=document.createElement("script");a.type="text/javascript";a.async=!0;a.src="https://cdn-in.pagesense.io/js/aisensy/23640c72623a4639b23b58efd93a4209.js";b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b)})(window,"script");
+📍 XPath: /html/body/script[6]
+Total unique matches found: 3

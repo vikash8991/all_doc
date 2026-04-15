@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="OrderedTest(failed)">
+    <classes>
+      <class name="day1.PriceAuthinticationTest">
+        <methods>
+          <include name="closePopup"/>
+          <include name="marketingCharges"/>
+          <include name="setup"/>
+          <include name="price"/>
+          <include name="clickOnDashBoard"/>
+          <include name="priceAfterCamp"/>
+          <include name="campCreationAuthintecationTest"/>
+        </methods>
+      </class> <!-- day1.PriceAuthinticationTest -->
+      <class name="day1.PriceUtilityTest">
+        <methods>
+          <include name="price"/>
+          <include name="priceAfterCamp"/>
+          <include name="clickOnDashBoard"/>
+          <include name="selectProject"/>
+          <include name="campCreationUtilityTest"/>
+          <include name="closePopup"/>
+          <include name="marketingCharges"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- day1.PriceUtilityTest -->
+    </classes>
+  </test> <!-- OrderedTest(failed) -->
+</suite> <!-- Failed suite [Suite] -->

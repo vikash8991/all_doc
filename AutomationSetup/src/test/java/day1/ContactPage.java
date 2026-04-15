@@ -1,0 +1,447 @@
+package day1;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class ContactPage {
+	
+	WebDriver driver;
+	//Explicit wait, wait till 60sec if element is not visible
+	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(60));
+	//constructor
+		
+	public ContactPage(WebDriver driver) {
+		this.driver=driver;
+		PageFactory.initElements(driver, this);
+	}
+	
+	
+	@FindBy(css = "[id=\"contacts\"]")
+	private WebElement btn_contact;
+	
+//	@FindBy(xpath = "//*[@id='contacts']")
+//	WebElement btn_contact;
+	
+	//search filter
+	
+	@FindBy(css = "[placeholder=\"Search name or mobile number\"]")
+	private WebElement txt_searchbox;	
+	
+	//ad contact
+	
+	@FindBy(xpath = "//*[@id=\"route-container\"]/div/div[3]/div/div/div[2]/div[1]/button/span[1]")
+	private WebElement btn_addContact;
+	
+	
+	@FindBy(css = "[placeholder=\"User Name\"]")
+	private WebElement txt_userName;
+	
+	
+	@FindBy(css = "[placeholder=\"WhatsApp Number\"]")
+	private WebElement txt_whatsappNumber;
+	
+	
+
+	// directly using through method
+	@FindBy(xpath = "//*[contains(@class, 'MuiButton-label') and contains(text(), 'Add Contact')])[2]")
+	private WebElement btn_Add_Contact;
+	
+	//import functionality
+	
+	//(//*[@class="MuiButton-label"])[6]
+	@FindBy(xpath = "(//*[@class=\"MuiButton-label\"])[6]")
+	private WebElement btn_import;
+	
+	
+	@FindBy(xpath = "//*[@id=\"simple-menu\"]/div[3]/ul/li")
+	private WebElement btn_import_contact;
+	
+	
+	@FindBy(xpath = "(//*[@class=\"MuiButton-label\"])[text()=\"Upload File\"]")
+	private WebElement btn_uploadFile;
+	
+	@FindBy(xpath = "//*[@role='combobox' and @name='name']")
+	WebElement map_name;
+	
+	
+	
+	@FindBy(xpath = "//*[@role='combobox' and @name='mobile']")
+	WebElement map_number;
+	
+	
+
+			
+	@FindBy(xpath = "(//*[contains(@class, 'MuiButton-label') and text()='Import'])[2]")
+	WebElement btn_import_final;
+	
+	
+	@FindBy(xpath = "(//*[contains(@class, 'MuiAlert-message') and text()='Succesfully started contacts import'])")
+	WebElement sucess_msg;
+	
+		
+	//import and broadcast
+	
+	@FindBy(css = "[name=\"campaignName\"]")
+	WebElement txt_campaign_msg;	
+	
+	
+	
+	@FindBy(xpath = "(//*[contains(@role, 'menuitem') and text()='Import and Broadcast'])")
+	WebElement btn_import_and_broadcast;
+	
+	
+	
+	@FindBy(xpath = "(//*[contains(@class, 'MuiButton-label') and text()='Next'])")
+	WebElement btn_next;
+	
+	
+	@FindBy(css = "[placeholder=\"Search template\"]")
+	WebElement select_temp;
+	
+	
+	@FindBy(xpath = "//*[contains(@class, 'MuiButton-label') and text()='Skip']")
+	WebElement btn_skip;
+	
+	
+	@FindBy(xpath = "//*[contains(@class, 'MuiButton-label') and text()='SEND NOW']")
+	WebElement btn_sendNow;
+	
+	
+	@FindBy(xpath = "//h5[text()='Successfully sent Campaign']")
+	WebElement sucess_msg_import_broadcast;
+	
+	
+	@FindBy(xpath = "//span[text()='Actions']")
+	WebElement btn_actions;
+	
+	@FindBy(xpath = "//li[text()='Export']")
+	WebElement btn_export;
+	
+	
+	@FindBy(xpath = "//*[contains(@class, 'MuiButton-label') and text()='Export']")
+	WebElement btn_export_final;
+	
+	
+	@FindBy(xpath = "//*[contains(@class, 'MuiButton-label') and text()='Cancel']")
+	WebElement btn_cancel_final;
+	
+	//import history
+	
+	@FindBy(xpath = "//*[contains(@class, 'MuiButtonBase-root') and text()='Import History']")
+	WebElement btn_import_history;
+	
+	
+	@FindBy(xpath = "/html/body/div[8]/div[3]/div/div[1]/h2/div/button/span[1]/svg/path")
+	WebElement btn_close_import_history;
+	
+	//filter
+	
+	
+	@FindBy(xpath = "//span[text()=\"Filter\"]")
+	WebElement btn_filter;
+	
+	
+			
+	public void clickOnContact() {
+	    btn_contact.click();
+	}
+	
+	public void clickOnSearchbox() {
+		txt_searchbox.click();
+	}
+	
+	
+	public void clickOnAddContact() {
+		btn_addContact.click();
+	}
+	
+	public void setUserName(String name) {
+		txt_userName.click();
+		txt_userName.sendKeys(name);
+	}
+	
+	
+	public void setWhatsappNumber(String name) {
+		txt_whatsappNumber.click();
+		txt_whatsappNumber.sendKeys(name);
+	}
+	
+	//btn_Add_Contact
+	
+	public void clickOnAddContactBtn() {
+		
+		WebElement secondAddContactButton = driver.findElement(By.xpath("(//*[contains(@class, 'MuiButton-label') and contains(text(), 'Add Contact')])[2]"));
+		secondAddContactButton.click();
+		
+		
+//		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+//		WebElement addContactBtn = wait.until(ExpectedConditions.elementToBeClickable(btn_Add_Contact));
+//		btn_Add_Contact.click();
+
+		
+	}
+	
+	
+	public void clickOnImport() {
+		btn_import.click();
+	}
+	
+	
+	
+	public void clickOnImportContact() {
+		btn_import_contact.click();
+	}
+	
+	
+	
+	public void clickOnUploadFile() {
+		
+		//input[@type='file' and @class='MuiButton-label']
+
+		WebElement fileInput = driver.findElement(By.xpath("//span[@class='MuiButton-label']/input[@type='file']"));
+    	((JavascriptExecutor) driver).executeScript("arguments[0].style.display='block';", fileInput);
+    	fileInput.sendKeys("C:\\Users\\Vikas\\birthday_csv.csv");
+		//btn_uploadFile.click();
+	}
+	
+	public void mapName() {
+		
+		 // Wait until the element is clickable
+	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+	    WebElement mapNameField = wait.until(ExpectedConditions.elementToBeClickable(map_name));
+	    
+	    // Click on the text field to activate the dropdown
+	    mapNameField.click();
+	    
+	    // Use Actions to perform key-based actions
+	    Actions actions = new Actions(driver);
+	    actions
+	        .sendKeys(Keys.ENTER)      // Select the highlighted option
+	        .perform();
+    	
+    }
+    
+    public void mapNumber() {
+
+    	
+    	 // Wait until the element is clickable
+	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+	    WebElement mapNumberField = wait.until(ExpectedConditions.elementToBeClickable(map_number));
+	    
+	    // Click on the text field to activate the dropdown
+	    mapNumberField.click();
+	    
+	    // Use Actions to perform key-based actions
+	    Actions actions = new Actions(driver);
+	    actions
+	        .sendKeys(Keys.ENTER)      // Select the highlighted option
+	        .perform();
+    	
+    }
+    
+    
+    //btn_import_final
+	
+    public void clickOnImportBtn(){
+    	btn_import_final.click();
+    }
+    
+    public void verifySucessMsg() {
+        // Wait for the success message to be visible
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebElement successMessageElement = wait.until(ExpectedConditions.visibilityOf(sucess_msg));
+
+        // Get the text of the success message
+        String actualMessage = successMessageElement.getText();
+
+        // Define the expected message
+        String expectedMessage = "Succesfully started contacts import"; // Replace with the actual expected message
+
+        // Assert that the actual message matches the expected message
+        if (actualMessage.equals(expectedMessage)) {
+            System.out.println("Success message is correct: " + actualMessage);
+        } else {
+            System.out.println("Expected success message: " + expectedMessage);
+            System.out.println("Actual success message: " + actualMessage);
+            throw new AssertionError("Success message does not match!");
+        }
+    }
+    
+    
+    
+    public void clickOnImportAndBroadcastBtn(){
+    	btn_import_and_broadcast.click();
+    }
+
+    
+    public void setCampaignMsg(String camp){
+    	txt_campaign_msg.click();
+    	txt_campaign_msg.sendKeys(camp);
+    }
+    
+    
+    
+    public void clickOnBtnNext(){
+    	btn_next.click();
+    }
+	
+    
+    public void uploadFile() {
+    	//upload_btn.click();
+    	
+    	//driver.findElement(By.xpath("//div[contains(@class, 'MuiDropzoneArea-textContainer')]")).sendKeys("C:\\\\Users\\\\Vikas\\\\birthday_csv.csv");
+    	//Thread.sleep(2000);
+    	//upload_file.sendKeys("C:\\Users\\Vikas\\birthday_csv.csv");
+    	
+//    	WebElement uploadElement = driver.findElement(By.id("//div[contains(@class, 'MuiDropzoneArea-textContainer')]"));
+//    	uploadElement.sendKeys("C:\\Users\\Vikas\\birthday_csv.csv");
+    	
+    	WebElement fileInput = driver.findElement(By.xpath("//div//input[@accept='text/csv']"));
+    	((JavascriptExecutor) driver).executeScript("arguments[0].style.display='block';", fileInput);
+    	fileInput.sendKeys("C:\\Users\\Vikas\\birthday_csv.csv");
+    	
+    	
+    }
+	
+    
+    public void mapName1() {
+		
+		 // Wait until the element is clickable
+	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+	    WebElement mapNameField = wait.until(ExpectedConditions.elementToBeClickable(map_name));
+	    
+	    // Click on the text field to activate the dropdown
+	    mapNameField.click();
+	    
+	    // Use Actions to perform key-based actions
+	    Actions actions = new Actions(driver);
+	    actions
+	        .sendKeys(Keys.ENTER)      // Select the highlighted option
+	        .perform();
+   	
+   }
+   
+   public void mapNumber1() {
+
+   	
+   	 // Wait until the element is clickable
+	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+	    WebElement mapNumberField = wait.until(ExpectedConditions.elementToBeClickable(map_number));
+	    
+	    // Click on the text field to activate the dropdown
+	    mapNumberField.click();
+	    
+	    // Use Actions to perform key-based actions
+	    Actions actions = new Actions(driver);
+	    actions
+	        .sendKeys(Keys.ENTER)      // Select the highlighted option
+	        .perform();
+   	
+   }
+   
+   
+   
+   public void searchTemp(String tempName) {
+   	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
+   	//WebElement searchInput = driver.findElement(search_template);
+   	select_temp.sendKeys(tempName + Keys.ENTER);
+   	
+   	select_temp.sendKeys(Keys.ARROW_DOWN);
+   	select_temp.sendKeys(Keys.ENTER);
+   	
+   }
+   
+   
+   public void clickOnSkip(){
+	   btn_skip.click();
+   }
+   
+   
+   public void clickOnSendNow(){
+	   btn_sendNow.click();
+   }
+   
+   //sucess_msg_import_broadcast
+   public void verifySucessMsgImportBroadcast() {
+       // Wait for the success message to be visible
+       WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+       WebElement successMessageElement = wait.until(ExpectedConditions.visibilityOf(sucess_msg_import_broadcast));
+
+       // Get the text of the success message
+       String actualMessage = successMessageElement.getText();
+
+       // Define the expected message
+       String expectedMessage = "Successfully sent Campaign"; // Replace with the actual expected message
+
+       // Assert that the actual message matches the expected message
+       if (actualMessage.equals(expectedMessage)) {
+           System.out.println("Success message is correct: " + actualMessage);
+       } else {
+           System.out.println("Expected success message: " + expectedMessage);
+           System.out.println("Actual success message: " + actualMessage);
+           throw new AssertionError("Success message does not match!");
+       }
+   }
+   
+   //actions export
+   
+   
+   public void clickOnBtnActions(){
+	   btn_actions.click();
+   }
+   
+   
+   
+   public void clickOnBtnExport(){
+	   btn_export.click();
+   }
+   
+   
+   
+   public void clickOnBtnExportFinal(){
+//	   btn_export_final.click();
+	   WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+	   WebElement exportWithDetailsBtn = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[contains(@class, 'MuiButton-label') and text()='Export']")));
+	   exportWithDetailsBtn.click();
+   }
+
+   
+   public void clickOnBtnCancleFinal(){
+	   btn_cancel_final.click();
+   }
+   
+   //import history
+ //re use
+   public void clickOnBtnActions1(){
+	   btn_actions.click();
+   }
+   
+   
+   public void clickOnBtnImportHistory(){
+	   btn_import_history.click();
+   }
+   
+   //filter
+   
+   
+   public void clickOnBtnFilter(){
+	   btn_filter.click();
+   }
+   
+   
+   public void clickOnBtnCloseImportHistory(){
+	   btn_close_import_history.click();
+   }
+   
+}

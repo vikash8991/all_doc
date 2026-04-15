@@ -1,0 +1,15 @@
+package appiumSetup;
+
+public class BasicConf {
+
+	public static void main(String[] args) {
+		// hear i start with appium
+		//class will be trited as a test case 
+		// java appium client libraries jar need to add
+		// java selenium jar need to add
+		
+		System.out.println("test");
+
+	}
+
+}

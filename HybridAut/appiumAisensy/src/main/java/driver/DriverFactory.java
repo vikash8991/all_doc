@@ -1,0 +1,38 @@
+package driver;
+
+import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.options.UiAutomator2Options;
+
+import java.net.URL;
+
+public class DriverFactory {
+
+    private static AndroidDriver driver;
+
+    public static AndroidDriver getDriver() {
+        if (driver == null) {
+            try {
+                UiAutomator2Options options = new UiAutomator2Options();
+
+                // UPDATE THIS FOR YOUR APP
+                options.setDeviceName("emulator-5554");
+                options.setPlatformVersion("14");
+                options.setAppPackage("your.app.package");
+                options.setAppActivity("your.app.activity");
+
+                driver = new AndroidDriver(new URL("http://127.0.0.1:4723"), options);
+
+            } catch (Exception e) {
+                throw new RuntimeException("Failed to start driver: " + e.getMessage());
+            }
+        }
+        return driver;
+    }
+
+    public static void quitDriver() {
+        if (driver != null) {
+            driver.quit();
+            driver = null;
+        }
+    }
+}

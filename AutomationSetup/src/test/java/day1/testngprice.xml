@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="1" name="OrderedTest"> <!-- thread-count=1 ensures sequential execution -->
+    <classes>
+      <class name="day1.PriceUtilityTest"/>
+      <class name="day1.PriceAuthinticationTest"/>
+      <class name="day1.PriceMarketingTest"/>
+    </classes>
+  </test>
+</suite>

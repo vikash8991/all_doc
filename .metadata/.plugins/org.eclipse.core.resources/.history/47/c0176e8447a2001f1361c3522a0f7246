@@ -1,0 +1,86 @@
+package day1;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+public class StaticDrop {
+
+	public static void main(String[] args) throws InterruptedException {
+		// TODO Auto-generated method stub
+		WebDriver driver=new ChromeDriver();
+		
+		//driver.get("https://www.app.aisensy.com/signup");
+		
+		//staging
+			driver.get("https://staging.dj8sl4xl9bxki.amplifyapp.com/signup");
+		
+
+
+		driver.findElement(By.xpath("//input[@id='name']")).sendKeys("vikash");
+		driver.findElement(By.xpath("//input[@id='email']")).sendKeys("vikash23test46@gmail.com");
+		driver.findElement(By.xpath("//input[@id='contact']")).sendKeys("8279396355");
+		driver.findElement(By.xpath("//input[@id='password']")).sendKeys("1234@Asdf");
+		driver.findElement(By.xpath("//input[@id='confirmPassword']")).sendKeys("1234@Asdf");
+		driver.findElement(By.xpath("//span[normalize-space()='Start Your FREE Trial']")).click();
+		
+//		Thread.sleep(20000);
+		
+		
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(60));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("company")));
+        
+        driver.findElement(By.id("company")).sendKeys("qa");
+        driver.findElement(By.id("companyDescription")).sendKeys("qa desc");
+
+        // Select state (open dropdown, then click desired option)
+        WebElement stateDropdown = driver.findElement(By.xpath("/html/body/div[1]/div/div[2]/div[2]/div/div[2]/div/div[3]/div/div[6]/div/div/input"));
+        stateDropdown.click();  // Open dropdown
+        
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//li[normalize-space()='Bihar']")));
+        driver.findElement(By.xpath("//li[normalize-space()='Bihar']")).click();  // Select "Bihar" option
+       
+    	
+//        
+//        WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(20));
+//        wait1.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#mui-19774")));
+
+		//select state  id="mui-19774"
+//		WebElement dropStateEle=driver.findElement(By.xpath("/html/body/div[1]/div/div[2]/div[2]/div/div[2]/div/div[3]/div/div[6]/div/div/input"));
+//		Select dropState = new Select(dropStateEle);
+//		dropState.selectByVisibleText("Bihar");
+//		
+		//done
+		
+        WebElement sizeDropdown = driver.findElement(By.xpath("/html/body/div[1]/div/div[2]/div[2]/div/div[2]/div/div[3]/div/div[7]/div/div/input"));
+        sizeDropdown.click();
+        
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//li[normalize-space()='1 - 10 Employees']")));
+        driver.findElement(By.xpath("//li[normalize-space()='1 - 10 Employees']")).click(); 
+        
+//		WebElement dropSizeEle=driver.findElement(By.id("mui-29678"));
+//		Select dropSize = new Select(dropSizeEle);
+//		dropSize.selectByVisibleText("");
+		
+//		WebElement dropindustriesEle=driver.findElement(By.id("mui-26624"));
+//		Select dropindustries = new Select(dropindustriesEle);
+//		dropindustries.selectByVisibleText("");
+		
+		WebElement industriesDropdown = driver.findElement(By.xpath("/html/body/div[1]/div/div[2]/div[2]/div/div[2]/div/div[3]/div/div[8]/div/div/input"));
+		industriesDropdown.click();
+	        
+	    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//li[normalize-space()='IT Services']")));
+	    driver.findElement(By.xpath("//li[normalize-space()='IT Services']")).click(); 
+		
+	    Thread.sleep(5000);
+		driver.findElement(By.xpath("//span[normalize-space()='Complete Sign Up']")).click();
+		
+		Thread.sleep(5000);
+
+	}
+
+}

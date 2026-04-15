@@ -1,0 +1,106 @@
+package day1;
+
+import java.time.Duration;
+
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class QrCampaign {
+	
+	WebDriver driver;
+	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(60));
+    
+	//constructor
+		
+	public QrCampaign(WebDriver driver) {
+		this.driver=driver;
+		PageFactory.initElements(driver, this);
+	}
+	
+
+
+
+	//locator
+
+	
+
+
+
+
+	@FindBy(xpath = "//*[name()='path' and contains(@d,'M2.5 19h19')]")
+	private WebElement click_campaign;
+	
+	//launch btn
+	@FindBy(xpath = "/html/body/div[1]/div/div[2]/div/div[1]/div[3]/div/button[1]/span[1]")
+	private WebElement click_Launch;
+	
+	
+	@FindBy(xpath = "/html/body/div[8]/div[3]/div/div[2]/div/div[5]/a/div/div[3]/button/span")
+	private WebElement btn_Qr_Camp;
+
+	@FindBy(xpath = "/html/body/div[1]/div/div[2]/div/div[3]/div/div/div[1]/div[2]/div/div/input")
+	WebElement txt_create_campaignName;
+	
+	// Method to click the "campaign" button
+    public void clickCampaign() {
+    	click_campaign.click();
+    }
+
+
+
+	// Method to click the "launch" button
+    public void launchButton() {
+    	click_Launch.click();
+    }
+    
+   
+	
+	// Method to click the "Next" button
+    public void clickOnQrCampaign() {
+    	
+    	
+    	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+    	WebElement qrCampaignButton = wait.until(ExpectedConditions.elementToBeClickable(btn_Qr_Camp));
+    	qrCampaignButton.click();
+
+    }
+    
+//    public void setQrCampaignName(String campName) {
+////    	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+////        WebElement createCampaign = wait.until(ExpectedConditions.elementToBeClickable(txt_create_campaignName));
+////
+////        // Click and send the campaign name to the input field
+////        //createCampaign.click();
+//////        createCampaign.clear();  // Ensure the field is cleared before entering a new name (optional, but good practice)
+////        txt_create_campaignName.sendKeys(campName);
+//    	
+////    	JavascriptExecutor js = (JavascriptExecutor) driver;
+////    	js.executeScript("arguments[0].focus();", txt_create_campaignName);
+////    	txt_create_campaignName.sendKeys(campName);
+//    	
+//    	Actions actions = new Actions(driver);
+//    	actions.moveToElement(txt_create_campaignName).click().sendKeys(campName).build().perform();
+//    }
+    
+    public void setQrCampaignName(String campName) throws InterruptedException {
+    	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebElement createCampaign = wait.until(ExpectedConditions.elementToBeClickable(txt_create_campaignName));
+
+        // Click and send the campaign name to the input field
+        createCampaign.click();
+        createCampaign.clear();
+        Thread.sleep(2000);
+        createCampaign.sendKeys(campName);
+    }
+
+
+
+	
+    
+}
